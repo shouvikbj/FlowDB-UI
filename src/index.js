@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import App from './App';
+import NotFound from './components/NotFound';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Home from './components/Home';
@@ -13,10 +14,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path='/landingpage' element={<App/>}/>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/signup" element={<Signup/>}/>
-      <Route path="/login" element={<Login/>}/>
+      <Route exact path='/landingpage' element={<App/>}/>
+      <Route exact path="/" element={<Home/>}/>
+      <Route exact path="/signup" element={<Signup/>}/>
+      <Route exact path="/login" element={<Login/>}/>
+      <Route path="*" element={<NotFound/>} />
     </Routes>
   </BrowserRouter>
 );
