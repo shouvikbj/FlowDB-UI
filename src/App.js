@@ -16,13 +16,13 @@ const App = () => {
           <p className="text-lg">Empowering Your Data in the Cloud</p>
         </div>
       </header>
-      <main className="container mx-auto py-12">
+      <main className="container mx-auto py-12 px-2">
         <section className="flex flex-col lg:flex-row items-center justify-between mb-12">
           <div className="w-full lg:w-1/2 lg:pr-8">
             <h2 className="text-4xl font-bold mb-4 text-slate-500">
               Effortless Data Management
             </h2>
-            <p className="text-gray-700 leading-loose">
+            <p className="text-gray-700 leading-loose text-justify">
               Our cloud database solution offers seamless data management,
               allowing you to focus on building great applications. Enjoy easy
               integration and scale effortlessly as your data grows.
@@ -46,7 +46,7 @@ const App = () => {
           </div>
           <div className="w-full lg:w-1/2 mt-8 lg:mt-0 order-1 lg:order-2">
             <h2 className="text-4xl font-bold mb-4 text-slate-500">Secure Your Data</h2>
-            <p className="text-gray-700 leading-loose">
+            <p className="text-gray-700 leading-loose text-justify">
               Security is our top priority. Benefit from robust encryption and
               authentication mechanisms to keep your data safe. Rest easy
               knowing that your data is protected by state-of-the-art security
@@ -61,36 +61,36 @@ const App = () => {
             for your business.
           </p>
           <ul className="list-none text-left mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <li className="bg-white shadow-md p-4 rounded-3xl text-center">
-              <h3 className="text-lg font-semibold mb-2">
+            <li className="bg-white shadow-md p-4 rounded-3xl">
+              <h3 className="text-lg font-semibold mb-2 text-center">
                 Scalable and Flexible Architecture
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-justify">
                 Our database solution provides a scalable and flexible
                 architecture to meet your growing needs.
               </p>
             </li>
-            <li className="bg-white shadow-md p-4 rounded-3xl text-center">
-              <h3 className="text-lg font-semibold mb-2">
+            <li className="bg-white shadow-md p-4 rounded-3xl">
+              <h3 className="text-lg font-semibold mb-2 text-center">
                 Real-time Data Sync
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-justify">
                 Enjoy real-time data synchronization across devices, ensuring
                 your data is always up to date.
               </p>
             </li>
-            <li className="bg-white shadow-md p-4 rounded-3xl text-center">
-              <h3 className="text-lg font-semibold mb-2">Intuitive APIs</h3>
-              <p className="text-gray-600">
+            <li className="bg-white shadow-md p-4 rounded-3xl">
+              <h3 className="text-lg font-semibold mb-2 text-center">Intuitive APIs</h3>
+              <p className="text-gray-600 text-justify">
                 Our developer-friendly APIs make integration easy and provide an
                 intuitive experience.
               </p>
             </li>
-            <li className="bg-white shadow-md p-4 rounded-3xl text-center">
-              <h3 className="text-lg font-semibold mb-2">
+            <li className="bg-white shadow-md p-4 rounded-3xl">
+              <h3 className="text-lg font-semibold mb-2 text-center">
                 Automated Backup & Recovery
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-justify">
                 Benefit from automated backup processes and disaster recovery to
                 keep your data secure.
               </p>
