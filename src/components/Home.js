@@ -173,7 +173,7 @@ const Home = () => {
               Cloud Storage
             </p>
           </div>
-          <div className="container mx-auto mt-8 text-center">
+          <div className="container mx-auto mt-8 mb-10 text-center">
             <button
               onClick={logout}
               className="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700"
