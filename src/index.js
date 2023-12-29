@@ -9,6 +9,7 @@ import NotFound from './components/NotFound';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Home from './components/Home';
+import Project from './components/Project';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
       <Route exact path="/" element={<Home/>}/>
       <Route exact path="/signup" element={<Signup/>}/>
       <Route exact path="/login" element={<Login/>}/>
+      <Route exact path="/project/:projectid" element={<Project/>}/>
       <Route path="*" element={<NotFound/>} />
     </Routes>
   </BrowserRouter>

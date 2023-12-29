@@ -24,7 +24,7 @@ const Home = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = document.getElementById("add-project-form");
-    await fetch(`${API}/create/project/${userid}`, {
+    await fetch(`${API}/create/projectnames/${userid}`, {
       method: "POST",
       body: new FormData(form),
       mode: "cors",
@@ -44,7 +44,7 @@ const Home = () => {
   };
 
   const getProjects = async (id) => {
-    await fetch(`${API}/get/projects/${id}`, {
+    await fetch(`${API}/get/projectnames/${id}`, {
       method: "POST",
       mode: "cors",
     })
@@ -83,27 +83,25 @@ const Home = () => {
     navigate("/login");
   }
 
+  const fetchData = async () => {
+    try {
+      if (Cookies.get("fdb-user")) {
+        setUserid(Cookies.get("fdb-user"));
+        await getUserDetails(Cookies.get("fdb-user"));
+        await getProjects(Cookies.get("fdb-user"));
+        setLoading(false);
+      } else {
+        navigate("/landingpage");
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
     document.title = "FlowDB | Home";
-
-    const fetchData = async () => {
-      try {
-        if (Cookies.get("fdb-user")) {
-          setUserid(Cookies.get("fdb-user"));
-          await getUserDetails(Cookies.get("fdb-user"));
-          await getProjects(Cookies.get("fdb-user"));
-          setLoading(false);
-        } else {
-          navigate("/landingpage");
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        setLoading(false); // Set loading to false in case of an error
-      }
-    };
-
     fetchData();
-
     return () => {
       document.title = "FlowDB";
     };
