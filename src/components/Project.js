@@ -85,7 +85,7 @@ const Project = () => {
             ) : (
               <>
                 <h1 className="text-4xl font-bold mb-4">{projectname}</h1>
-                {Object.keys(project).length > 0 && (
+                {Object.keys(project).length >= 0 && (
                   <>
                     <div className="mx-auto bg-gray-800 rounded-xl shadow-lg p-6 overflow-scroll">
                       <p className="text-gray-500">
