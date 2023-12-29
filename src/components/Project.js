@@ -73,15 +73,17 @@ const Project = () => {
                 {Object.keys(project).length > 0 && (
                   <>
                     <h1 className="text-4xl font-bold mb-4">{projectname}</h1>
-                    <div className="mx-auto bg-gray-800 rounded-full shadow-lg p-6">
+                    <div className="mx-auto bg-gray-800 rounded-xl shadow-lg p-6">
                       {project.map((p) => (
                         <div
                           key={p.id}
                           className="max-w-lg mx-auto bg-gray-700 rounded-xl shadow-lg p-2 my-2 relative group"
                         >
-                          <p className="text-gray-400">"id": {p.id}</p>
-                          <p className="text-gray-400">"name": {p.name}</p>
-                          <p className="text-gray-400">"email": {p.email}</p>
+                          {Object.keys(p).map((key, index) => (
+                            <p key={index} className="text-gray-400">
+                              "{key}": "{p[key]}"
+                            </p>
+                          ))}
                           <button
                             onClick={() => {
                               deleteData(p.id);
