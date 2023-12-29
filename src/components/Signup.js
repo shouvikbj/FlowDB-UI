@@ -35,17 +35,17 @@ const Signup = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen bg-gray-900">
       <form
         id="signup-form"
-        className="bg-white p-8 rounded-2xl shadow-md w-96"
+        className="bg-gray-800 p-8 rounded-xl shadow-md w-96 text-white"
         onSubmit={handleSubmit}
       >
         <h2 className="text-2xl font-bold mb-4 text-blue-600">Sign Up</h2>
         <div className="mb-4">
           <label
             htmlFor="username"
-            className="block text-sm font-medium text-gray-600"
+            className="block text-sm font-medium text-gray-400"
           >
             Full Name
           </label>
@@ -53,7 +53,7 @@ const Signup = () => {
             type="text"
             id="name"
             name="name"
-            className="mt-1 p-2 w-full border rounded-full"
+            className="mt-1 p-2 w-full border rounded-full bg-gray-700"
             placeholder="Enter your name"
             required
           />
@@ -61,7 +61,7 @@ const Signup = () => {
         <div className="mb-4">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-600"
+            className="block text-sm font-medium text-gray-400"
           >
             Email
           </label>
@@ -69,7 +69,7 @@ const Signup = () => {
             type="email"
             id="email"
             name="email"
-            className="mt-1 p-2 w-full border rounded-full"
+            className="mt-1 p-2 w-full border rounded-full bg-gray-700"
             placeholder="Enter your email"
             required
           />
@@ -77,7 +77,7 @@ const Signup = () => {
         <div className="mb-6">
           <label
             htmlFor="password"
-            className="block text-sm font-medium text-gray-600"
+            className="block text-sm font-medium text-gray-400"
           >
             Password
           </label>
@@ -85,7 +85,7 @@ const Signup = () => {
             type="password"
             id="password"
             name="password"
-            className="mt-1 p-2 w-full border rounded-full"
+            className="mt-1 p-2 w-full border rounded-full bg-gray-700"
             placeholder="Enter your password"
             required
           />

@@ -78,6 +78,11 @@ const Home = () => {
       });
   };
 
+  const logout = () => {
+    Cookies.remove("fdb-user");
+    navigate("/login");
+  }
+
   useEffect(() => {
     document.title = "FlowDB | Home";
 
@@ -138,7 +143,7 @@ const Home = () => {
               </div>
               <div className="container mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {projects.length === 0 ? (
-                  <div className="flex items-center justify-center h-full">
+                  <div className="text-center h-full">
                     <p className="text-center text-gray-300">
                       No projects yet!
                     </p>
@@ -161,6 +166,21 @@ const Home = () => {
               </div>
             </>
           )}
+          <div className="container mx-auto mt-8 p-4 border border-white rounded-xl text-gray-400 text-center">
+            <p>FlowDB projects are containers for your apps</p>
+            <p>
+              Apps in a project share features like Real-time Database, Secure
+              Cloud Storage
+            </p>
+          </div>
+          <div className="container mx-auto mt-8 text-center">
+            <button
+              onClick={logout}
+              className="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700"
+            >
+              Logout
+            </button>
+          </div>
         </main>
       </div>
       {showModal && (
