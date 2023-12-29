@@ -35,10 +35,21 @@ const Signup = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-900">
+    <div
+      className="flex justify-center items-center h-screen"
+      style={{
+        backgroundImage: `url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div
+        className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"
+        style={{ backdropFilter: "blur(10px)" }}
+      ></div>
       <form
         id="signup-form"
-        className="bg-gray-800 p-8 rounded-xl shadow-md w-96 text-white"
+        className="relative z-10 bg-gray-800 p-8 rounded-xl shadow-md w-96 text-white"
         onSubmit={handleSubmit}
       >
         <h2 className="text-2xl font-bold mb-4 text-blue-600">Sign Up</h2>

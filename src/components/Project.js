@@ -17,9 +17,7 @@ const Project = () => {
       method: "POST",
       mode: "cors",
     })
-      .then((response) => {
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
         if (data.status === "ok") {
           setProjectname(data.projectname);
@@ -47,8 +45,24 @@ const Project = () => {
     }
   };
 
-  const deleteData = (dataid) => {
-    alert(dataid);
+  const deleteData = async (dataid, category) => {
+    await fetch(`${API}/delete/${projectid}/${category}/${dataid}`, {
+      method: "POST",
+      mode: "cors"
+    })
+    .then((response) => {
+      return response.json()
+    })
+    .then((data) => {
+      if(data.status === "ok"){
+        alert(data.message)
+        // eslint-disable-next-line no-restricted-globals
+        location.reload()
+      }
+      else{
+        alert(data.message)
+      }
+    })
   };
 
   useEffect(() => {
@@ -70,47 +84,68 @@ const Project = () => {
               </div>
             ) : (
               <>
+                <h1 className="text-4xl font-bold mb-4">{projectname}</h1>
                 {Object.keys(project).length > 0 && (
                   <>
-                    <h1 className="text-4xl font-bold mb-4">{projectname}</h1>
-                    <div className="mx-auto bg-gray-800 rounded-xl shadow-lg p-6">
-                      {project.map((p) => (
-                        <div
-                          key={p.id}
-                          className="max-w-lg mx-auto bg-gray-700 rounded-xl shadow-lg p-2 my-2 relative group"
-                        >
-                          {Object.keys(p).map((key, index) => (
-                            <p key={index} className="text-gray-400">
-                              "{key}": "{p[key]}"
-                            </p>
-                          ))}
-                          <button
-                            onClick={() => {
-                              deleteData(p.id);
-                            }}
-                            className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              className="h-4 w-4"
+                    <div className="mx-auto bg-gray-800 rounded-xl shadow-lg p-6 overflow-scroll">
+                      <p className="text-gray-500">
+                        <span className="text-xl">
+                          Below links are your API references for this project:
+                        </span>
+                        <br />
+                        [POST]: {`https://flowdbapi.pythonanywhere.com/api/adddata/<data-category-name>/${projectid}`}
+                        <br />
+                        [POST]: {`https://flowdbapi.pythonanywhere.com/api/project/${projectid}`}
+                        <br />
+                        [POST]: {`https://flowdbapi.pythonanywhere.com/api/project/${projectid}/<data-category-name>`}
+                      </p>
+                      <br />
+                      {Object.keys(project).map((category) => (
+                        <div key={category}>
+                          <p className="text-gray-400">{category}</p>
+                          {Object.keys(project[category]).map((key) => (
+                            <div
+                              key={key}
+                              className="mx-auto bg-gray-700 bg-opacity-30 rounded-xl shadow-lg p-2 my-2 relative group overflow-scroll"
+                              style={{ backdropFilter: "blur(10px)" }}
                             >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M3 6l2 14h14l2-14H3z"
-                              />
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M15 6a2 2 0 1 1-4 0 2 2 0 1 1-4 0"
-                              />
-                            </svg>
-                          </button>
+                              {Object.keys(project[category][key]).map(
+                                (innerKey) => (
+                                  <p key={innerKey} className="text-gray-400">
+                                    "{innerKey}" : "
+                                    {project[category][key][innerKey]}"
+                                  </p>
+                                )
+                              )}
+                              <button
+                                onClick={() => {
+                                  deleteData(project[category][key].id, category);
+                                }}
+                                className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  className="h-4 w-4"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M3 6l2 14h14l2-14H3z"
+                                  />
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M15 6a2 2 0 1 1-4 0 2 2 0 1 1-4 0"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          ))}
                         </div>
                       ))}
                     </div>
