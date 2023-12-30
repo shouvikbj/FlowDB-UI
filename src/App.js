@@ -137,13 +137,15 @@ const App = () => {
               <p className="text-gray-300 text-center">Absolutely.</p>
             </li>
           </ul>
-          <br/>
+          <br />
           <p className="text-gray-300 text-center">
-            Works with any Frontend you can think of.
+            Compatible with every imaginable Frontend platform.
           </p>
         </section>
         <section className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-blue-500">What Our Clients Say</h2>
+          <h2 className="text-4xl font-bold mb-4 text-blue-500">
+            What Our Clients Say
+          </h2>
           <div className="flex flex-col lg:flex-row items-center justify-around mt-8">
             <div className="w-full lg:w-1/3 lg:mb-0 mb-8">
               <img
@@ -156,9 +158,7 @@ const App = () => {
                 It's reliable, efficient, and has simplified our development
                 process."
               </p>
-              <p className="text-gray-200 mt-2">
-                - Team GangPayee
-              </p>
+              <p className="text-gray-200 mt-2">- Team GangPayee</p>
             </div>
             <div className="w-full lg:w-1/3">
               <img
