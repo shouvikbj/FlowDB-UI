@@ -45,7 +45,9 @@ const App = () => {
             />
           </div>
           <div className="w-full lg:w-1/2 mt-8 lg:mt-0 order-1 lg:order-2">
-            <h2 className="text-4xl font-bold mb-4 text-blue-500">Secure Your Data</h2>
+            <h2 className="text-4xl font-bold mb-4 text-blue-500">
+              Secure Your Data
+            </h2>
             <p className="text-gray-300 leading-loose text-justify">
               Security is our top priority. Benefit from robust encryption and
               authentication mechanisms to keep your data safe. Rest easy
@@ -55,7 +57,9 @@ const App = () => {
           </div>
         </section>
         <section className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-blue-500">Key Features</h2>
+          <h2 className="text-4xl font-bold mb-4 text-blue-500">
+            Key Features
+          </h2>
           <p className="text-gray-300">
             Explore the features that make CloudDB Solutions the right choice
             for your business.
@@ -65,7 +69,7 @@ const App = () => {
               <h3 className="text-lg font-semibold mb-2 text-center">
                 Scalable and Flexible Architecture
               </h3>
-              <p className="text-gray-300 text-justify">
+              <p className="text-gray-300 text-center">
                 Our database solution provides a scalable and flexible
                 architecture to meet your growing needs.
               </p>
@@ -74,14 +78,16 @@ const App = () => {
               <h3 className="text-lg font-semibold mb-2 text-center">
                 Real-time Data Sync
               </h3>
-              <p className="text-gray-300 text-justify">
+              <p className="text-gray-300 text-center">
                 Enjoy real-time data synchronization across devices, ensuring
                 your data is always up to date.
               </p>
             </li>
             <li className="bg-gray-800 shadow-md p-4 rounded-3xl">
-              <h3 className="text-lg font-semibold mb-2 text-center">Intuitive APIs</h3>
-              <p className="text-gray-300 text-justify">
+              <h3 className="text-lg font-semibold mb-2 text-center">
+                Intuitive APIs
+              </h3>
+              <p className="text-gray-300 text-center">
                 Our developer-friendly APIs make integration easy and provide an
                 intuitive experience.
               </p>
@@ -90,7 +96,7 @@ const App = () => {
               <h3 className="text-lg font-semibold mb-2 text-center">
                 Automated Backup & Recovery
               </h3>
-              <p className="text-gray-300 text-justify">
+              <p className="text-gray-300 text-center">
                 Benefit from automated backup processes and disaster recovery to
                 keep your data secure.
               </p>
@@ -98,6 +104,45 @@ const App = () => {
           </ul>
         </section>
         <section className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4 text-blue-500">
+            Works With All
+          </h2>
+          <p className="text-gray-300">
+            Compatible with a variety of Frontend Frameworks — whatever you
+            prefer, we've got you covered.
+          </p>
+          <ul className="list-none text-left mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <li className="bg-gray-800 shadow-md p-4 rounded-3xl">
+              <h3 className="text-lg font-semibold mb-2 text-center">
+                ReactJS?
+              </h3>
+              <p className="text-gray-300 text-center">Surely.</p>
+            </li>
+            <li className="bg-gray-800 shadow-md p-4 rounded-3xl">
+              <h3 className="text-lg font-semibold mb-2 text-center">
+                AngularJS?
+              </h3>
+              <p className="text-gray-300 text-center">No issue.</p>
+            </li>
+            <li className="bg-gray-800 shadow-md p-4 rounded-3xl">
+              <h3 className="text-lg font-semibold mb-2 text-center">
+                React Native
+              </h3>
+              <p className="text-gray-300 text-center">Why not.</p>
+            </li>
+            <li className="bg-gray-800 shadow-md p-4 rounded-3xl">
+              <h3 className="text-lg font-semibold mb-2 text-center">
+                Flutter?
+              </h3>
+              <p className="text-gray-300 text-center">Absolutely.</p>
+            </li>
+          </ul>
+          <br/>
+          <p className="text-gray-300 text-center">
+            Works with any Frontend you can think of.
+          </p>
+        </section>
+        {/* <section className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4 text-blue-500">What Our Clients Say</h2>
           <div className="flex flex-col lg:flex-row items-center justify-around mt-8">
             <div className="w-full lg:w-1/3 lg:mb-0 mb-8">
@@ -130,9 +175,11 @@ const App = () => {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className="text-center">
-          <h2 className="text-4xl font-bold mb-4 text-blue-500">Get Started Today</h2>
+          <h2 className="text-4xl font-bold mb-4 text-blue-500">
+            Get Started Today
+          </h2>
           <p className="text-gray-300">
             Ready to experience the power of FlowDB Solutions? Sign up now and
             take your applications to the next level.
