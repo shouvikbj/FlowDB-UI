@@ -75,7 +75,7 @@ const Project = () => {
 
   useEffect(() => {
     document.title = `FlowDB | Project`;
-    setTimeout(fetchData, 5000);
+    fetchData();
     return () => {
       document.title = "FlowDB";
     };
