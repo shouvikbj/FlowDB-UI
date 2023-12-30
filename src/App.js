@@ -142,12 +142,12 @@ const App = () => {
             Works with any Frontend you can think of.
           </p>
         </section>
-        {/* <section className="text-center mb-12">
+        <section className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4 text-blue-500">What Our Clients Say</h2>
           <div className="flex flex-col lg:flex-row items-center justify-around mt-8">
             <div className="w-full lg:w-1/3 lg:mb-0 mb-8">
               <img
-                src="https://avatars.githubusercontent.com/u/30182097?v=4"
+                src="https://gpboard.vercel.app/_next/image?url=%2Flogo48.png&w=128&q=75"
                 alt="Client 1"
                 className="w-20 h-20 rounded-full mx-auto mb-4"
               />
@@ -157,25 +157,25 @@ const App = () => {
                 process."
               </p>
               <p className="text-gray-200 mt-2">
-                - John Doe, CEO at Tech Innovations
+                - Team GangPayee
               </p>
             </div>
             <div className="w-full lg:w-1/3">
               <img
-                src="https://media.licdn.com/dms/image/D5603AQGsVDXx2vKR3g/profile-displayphoto-shrink_800_800/0/1703090344747?e=1709164800&v=beta&t=xw-KOBY1_bTPU9TbuGDX16PTBT1Oi5gc_olUaQWAX5c"
+                src="https://media.licdn.com/dms/image/C5603AQGi9ytQ5XXr5w/profile-displayphoto-shrink_800_800/0/1650027321513?e=2147483647&v=beta&t=tVSEsI7RLFcCnq3lLm7ofRBU51ZJmuSZrnG32fmfJp0"
                 alt="Client 2"
                 className="w-20 h-20 rounded-full mx-auto mb-4"
               />
               <p className="text-gray-300">
-                "The security features provided by FlowDB Solutions give us
-                peace of mind. Our data is in good hands."
+                "The security features provided by FlowDB Solutions give me
+                peace of mind. My data is in good hands."
               </p>
               <p className="text-gray-200 mt-2">
-                - Jane Smith, CTO at SecureTech
+                - Soumen Bajpayee, Researcher at IIIT Kalyani
               </p>
             </div>
           </div>
-        </section> */}
+        </section>
         <section className="text-center">
           <h2 className="text-4xl font-bold mb-4 text-blue-500">
             Get Started Today
