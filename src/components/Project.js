@@ -46,23 +46,26 @@ const Project = () => {
   };
 
   const deleteData = async (dataid, category) => {
-    await fetch(`${API}/delete/${projectid}/${category}/${dataid}`, {
-      method: "POST",
-      mode: "cors"
-    })
-    .then((response) => {
-      return response.json()
-    })
-    .then((data) => {
-      if(data.status === "ok"){
-        alert(data.message)
-        // eslint-disable-next-line no-restricted-globals
-        location.reload()
-      }
-      else{
-        alert(data.message)
-      }
-    })
+    // eslint-disable-next-line no-restricted-globals
+    const confirmation = confirm("Delete this record?");
+    if (confirmation) {
+      await fetch(`${API}/delete/${projectid}/${category}/${dataid}`, {
+        method: "POST",
+        mode: "cors",
+      })
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          if (data.status === "ok") {
+            alert(data.message);
+            // eslint-disable-next-line no-restricted-globals
+            location.reload();
+          } else {
+            alert(data.message);
+          }
+        });
+    }
   };
 
   useEffect(() => {
@@ -93,11 +96,14 @@ const Project = () => {
                           Below links are your API references for this project:
                         </span>
                         <br />
-                        [POST]: {`https://flowdbapi.pythonanywhere.com/api/adddata/<data-category-name>/${projectid}`}
+                        [POST]:{" "}
+                        {`https://flowdbapi.pythonanywhere.com/api/adddata/<data-category-name>/${projectid}`}
                         <br />
-                        [POST]: {`https://flowdbapi.pythonanywhere.com/api/project/${projectid}`}
+                        [POST]:{" "}
+                        {`https://flowdbapi.pythonanywhere.com/api/project/${projectid}`}
                         <br />
-                        [POST]: {`https://flowdbapi.pythonanywhere.com/api/project/${projectid}/<data-category-name>`}
+                        [POST]:{" "}
+                        {`https://flowdbapi.pythonanywhere.com/api/project/${projectid}/<data-category-name>`}
                       </p>
                       <br />
                       {Object.keys(project).map((category) => (
@@ -119,7 +125,10 @@ const Project = () => {
                               )}
                               <button
                                 onClick={() => {
-                                  deleteData(project[category][key].id, category);
+                                  deleteData(
+                                    project[category][key].id,
+                                    category
+                                  );
                                 }}
                                 className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                               >
