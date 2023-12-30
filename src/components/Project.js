@@ -68,6 +68,11 @@ const Project = () => {
     }
   };
 
+  const syncChanges = () => {
+    // eslint-disable-next-line no-restricted-globals
+    location.reload()
+  }
+
   useEffect(() => {
     document.title = `FlowDB | Project`;
     fetchData();
@@ -91,6 +96,13 @@ const Project = () => {
                 {Object.keys(project).length >= 0 && (
                   <>
                     <div className="mx-auto bg-gray-800 rounded-xl shadow-lg p-6 overflow-scroll">
+                      <button
+                        onClick={syncChanges}
+                        className="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-500 float-right"
+                      >
+                        Sync
+                      </button>
+                      <br/><br/>
                       <p className="text-gray-500">
                         <span className="text-xl">
                           Below links are your API references for this project:
@@ -99,11 +111,30 @@ const Project = () => {
                         [POST]:{" "}
                         {`https://flowdbapi.pythonanywhere.com/api/adddata/<data-category-name>/${projectid}`}
                         <br />
+                        <span className="font-bold">
+                          Note: Need to send a FormData along with the above
+                          url.
+                        </span>
+                        <br />
                         [POST]:{" "}
                         {`https://flowdbapi.pythonanywhere.com/api/project/${projectid}`}
                         <br />
                         [POST]:{" "}
                         {`https://flowdbapi.pythonanywhere.com/api/project/${projectid}/<data-category-name>`}
+                        <br />
+                        [POST]:{" "}
+                        {`https://flowdbapi.pythonanywhere.com/api/project/${projectid}/<data-category-name>/<data-record-id>`}
+                        <br />
+                        [PUT]:{" "}
+                        {`https://flowdbapi.pythonanywhere.com/api/project/${projectid}/<data-category-name>/<data-record-id>`}
+                        <br />
+                        <span className="font-bold">
+                          Note: Need to send a FormData along with the above
+                          url.
+                        </span>
+                        <br />
+                        [DELETE]:{" "}
+                        {`https://flowdbapi.pythonanywhere.com/api/project/${projectid}/<data-category-name>/<data-record-id>`}
                       </p>
                       <br />
                       {Object.keys(project).map((category) => (
