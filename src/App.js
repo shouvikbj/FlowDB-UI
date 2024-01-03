@@ -30,7 +30,7 @@ const App = () => {
           </div>
           <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
             <img
-              src="https://www.techrepublic.com/wp-content/uploads/2022/06/cloud-databases-on-premises-persists.jpeg"
+              src="https://silverlinecrm.com/wp-content/uploads/2020/07/iStock-1192490084.jpg"
               alt="Database Icon"
               className="w-full rounded-2xl shadow-lg"
             />
